@@ -1,7 +1,7 @@
 # Black Hole Plugin
 
 
-![BlackHoleGif](BlackHole\Resources\BlackHoleGif.gif)
+![BlackHoleGif](https://github.com/leonardodesigner/BlackHole/tree/master/Resources/BlackHoleGif)
 
 Black hole plugin fully created in c++ and can be used in any project without c++ knowledge!
 
