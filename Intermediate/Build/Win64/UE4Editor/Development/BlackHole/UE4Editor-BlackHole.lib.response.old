@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-BlackHole.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\UE4\Treinos\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\BlackHole.cpp.obj"
+"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Default.rc2.res"
+/OUT:"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole.lib"
+/INCLUDE:IMPLEMENT_MODULE_BlackHole

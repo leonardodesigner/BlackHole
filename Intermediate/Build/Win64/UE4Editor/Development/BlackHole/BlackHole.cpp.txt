@@ -1,0 +1,2 @@
+E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Definitions.BlackHole.h
+E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Source\BlackHole\Public\BlackHole.h
