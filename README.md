@@ -29,6 +29,7 @@ Black hole plugin fully created in c++ and can be used in any project without c+
 * Regenerate visual studio project files and build your project.
 * Launch the project, and enable plugin content viewer as seen below. This will show contents of the plugin in your content browser:
 
+![HowToInstall](https://user-images.githubusercontent.com/12305857/131716253-3538efce-1d15-41d4-99e5-30af8bd54018.png)
 
 
 ## License
