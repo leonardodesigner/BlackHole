@@ -28,11 +28,11 @@
 /we4458
 /we4459
 /wd4463
-/wd4668
+/we4668
 /wd4244
 /wd4838
 /I .
-/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source\BlackHole\Private"
+/I F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Source\BlackHole\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -78,6 +78,8 @@
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\GameplayTags
 /I Runtime\GameplayTags\Classes
 /I Runtime\GameplayTags\Public
+/I ..\Intermediate\Build\Win64\UE4Editor\Inc\DeveloperSettings
+/I Runtime\DeveloperSettings\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\PacketHandler
 /I Runtime\PacketHandlers
 /I Runtime\PacketHandlers\PacketHandler\Classes
@@ -95,8 +97,6 @@
 /I Runtime\NetworkReplayStreaming\NetworkReplayStreaming\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\PhysicsCore
 /I Runtime\PhysicsCore\Public
-/I ..\Intermediate\Build\Win64\UE4Editor\Inc\DeveloperSettings
-/I Runtime\DeveloperSettings\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Chaos
 /I Runtime\Experimental
 /I Runtime\Experimental\Chaos\Public
@@ -232,9 +232,9 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Inc\BlackHole"
-/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source"
-/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source\BlackHole\Public"
+/I F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Inc\BlackHole
+/I F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Source
+/I F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Source\BlackHole\Public
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -258,18 +258,18 @@
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public
 /I ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include
 /I ThirdParty\PhysX3\APEX_1.4\shared\internal\include
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\INCLUDE"
-/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.2\include\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
-/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp"
-/FI"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Definitions.BlackHole.h"
-/Fo"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp.obj"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\INCLUDE"
+/I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\ucrt"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\shared"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\um"
+/I "C:\Program Files (x86)\Windows Kits\10\include\10.0.19041.0\winrt"
+/FI"F:\UnrealProjects\TreinosCPP\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"F:\UnrealProjects\TreinosCPP\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"F:\UnrealProjects\TreinosCPP\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp"
+/FI"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Definitions.BlackHole.h"
+/Fo"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp.obj"
 /TP
 /GR-
 /W4

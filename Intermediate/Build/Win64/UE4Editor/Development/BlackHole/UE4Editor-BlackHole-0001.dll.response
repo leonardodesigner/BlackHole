@@ -1,5 +1,5 @@
 /MANIFEST:EMBED
-/MANIFESTINPUT:"C:\Program Files\Epic Games\UE_4.25\Engine\Build\Windows\Resources\Default-Win64.manifest"
+/MANIFESTINPUT:"C:\Program Files\Epic Games\UE_4.27\Engine\Build\Windows\Resources\Default-Win64.manifest"
 /NOLOGO
 /DEBUG
 /errorReport:prompt
@@ -18,10 +18,10 @@
 /ignore:4099
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\lib\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.2\lib\um\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\ucrt\x64"
-/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.17763.0\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\lib\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.19041.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
 /NODEFAULTLIB:"LIBCPMT"
 /NODEFAULTLIB:"LIBCMTD"
@@ -33,10 +33,15 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
-"E:\UE4\Treinos\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
-"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp.obj"
-"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp.obj"
-"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Default.rc2.res"
+"F:\UnrealProjects\TreinosCPP\PluginProject\Intermediate\Build\Win64\PluginProjectEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp.obj"
+"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.gen.cpp.obj"
+"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Default.rc2.res"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\SlateCore\UE4Editor-SlateCore.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
@@ -61,13 +66,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-"C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
-"C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
-"C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Slate\UE4Editor-Slate.lib"
-"C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\SlateCore\UE4Editor-SlateCore.lib"
-"C:\Program Files\Epic Games\UE_4.25\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
-/OUT:"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Binaries\Win64\UE4Editor-BlackHole-0001.dll"
-/IMPLIB:"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole-0001.suppressed.lib"
-/PDB:"E:\UE4\Treinos\PluginProject\Plugins\BlackHole\Binaries\Win64\UE4Editor-BlackHole-0001.pdb"
+/OUT:"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Binaries\Win64\UE4Editor-BlackHole-0001.dll"
+/IMPLIB:"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\UE4Editor-BlackHole-0001.suppressed.lib"
+/PDB:"F:\UnrealProjects\TreinosCPP\PluginProject\Plugins\BlackHole\Binaries\Win64\UE4Editor-BlackHole-0001.pdb"
 /ignore:4078
-/INCLUDE:IMPLEMENT_MODULE_BlackHole

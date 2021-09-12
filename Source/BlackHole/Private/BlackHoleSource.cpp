@@ -27,34 +27,54 @@ ABlackHoleSource::ABlackHoleSource()
 
 	// Particle Configuration
 	BlackHoleParticleEffect = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("ParticleSystem"));
+	BlackHoleParticleEffect -> SetTemplate(SetBlackHoleEffect);
 	BlackHoleParticleEffect -> SetupAttachment(BlackHoleMesh);
 	BlackHoleParticleEffect -> SetRelativeLocation(FVector(0.0f,0.0f,-0.0f),false);
 	BlackHoleParticleEffect -> SetRelativeScale3D(FVector(1.0f,1.0f,1.0f));
 
 	//Sound Configuration
 	BlackHoleSound = CreateDefaultSubobject<USoundBase>(TEXT("SoundComponent"));
-	
+
+	SetReplicates(true);
+
 }
 
 // Called when the game starts or when spawned
 void ABlackHoleSource::BeginPlay()
 {
 	Super::BeginPlay();
-
+	
+    //Set Black hole particle
+	BlackHoleParticleEffect -> SetTemplate(SetBlackHoleEffect);
 	// Play black hole base sound
 	UGameplayStatics::PlaySound2D(this,BlackHoleSound);
-	
+
+	//Multi_PlayEffect(this);
 }
 
-void ABlackHoleSource::PlayEffect(AActor * SuctedActor)
+
+
+
+void ABlackHoleSource::PlayEffect(AActor * AttractedActor)
 {
 
 	// Play Particle Effects
-	UGameplayStatics::SpawnEmitterAtLocation(this,SuctionEffect,SuctedActor->GetActorLocation());
+	UGameplayStatics::SpawnEmitterAtLocation(this,DestructionEffect,AttractedActor->GetActorLocation());
 	// Play Sounds
-	UGameplayStatics::PlaySound2D(this,SuctionSound);
+	UGameplayStatics::PlaySound2D(this,DestructionSound);
 	
 }
+
+
+
+void ABlackHoleSource::Multi_PlayEffect_Implementation(AActor* AttractedActor)
+{
+	
+	PlayEffect(AttractedActor);          // Play Effects
+}
+
+
+
 
 // Called every frame
 void ABlackHoleSource::Tick(float DeltaTime)
@@ -100,7 +120,7 @@ void ABlackHoleSource::Tick(float DeltaTime)
 						auto * HitActor= Cast<AActor>(HitResult.Actor );
 						Projectile -> StopMovementImmediately();       // Stop projectile movement when is range of black hole
 						Projectile -> Deactivate();                    // Deactivate projectile movement after is stoped 
-						const FVector ObjLocations = UKismetMathLibrary::VInterpTo (HitActor -> GetActorLocation(),GetActorLocation(),DeltaTime,SuctionVelocity/10.0f);
+						const FVector ObjLocations = UKismetMathLibrary::VInterpTo (HitActor -> GetActorLocation(),GetActorLocation(),DeltaTime,GravitationalAttraction/10.0f);
 						const FVector DistProj     = HitActor -> GetActorLocation() - GetActorLocation(); // Distance between actors
 						const float DistProjLength = DistProj.Size(); // Get Distance Length
 
@@ -115,7 +135,7 @@ void ABlackHoleSource::Tick(float DeltaTime)
 
 							const FVector Direction =  UKismetMathLibrary::GetForwardVector(RotDirection); // Create the Direction using Forward Vector
 
-							const FVector HoleForce = (Direction * DistProjLength)*SuctionVelocity; // Create Force 
+							const FVector HoleForce = (Direction * DistProjLength)*GravitationalAttraction; // Create Force 
 						
 							HitResult.Component -> AddForce(HoleForce,NAME_Name,true);
 							
@@ -130,12 +150,16 @@ void ABlackHoleSource::Tick(float DeltaTime)
 						{
 
 							
+						   
 							if (GetLocalRole() == ROLE_Authority)
 							{
-								PlayEffect(HitActor);          // Play Effects
+								Multi_PlayEffect(HitActor);    // Play Effects
 								OnDestroyActor(HitActor);      // Active on destroy actor event before destroy actor permanently
 								HitActor -> Destroy();         // Destroy Actor Permanently	
-							}  
+							}
+
+							
+							
 						}
 
 						
@@ -156,7 +180,7 @@ void ABlackHoleSource::Tick(float DeltaTime)
 
 							const FVector Direction =  UKismetMathLibrary::GetForwardVector(RotDirection); // Create the Direction using Forward Vector
 
-							const FVector HoleForce = (Direction * DistLength)*SuctionVelocity; // Create Force 
+							const FVector HoleForce = (Direction * DistLength)*GravitationalAttraction; // Create Force 
 						
 							HitResult.Component -> AddForce(HoleForce,NAME_Name,true);
                         
@@ -165,13 +189,18 @@ void ABlackHoleSource::Tick(float DeltaTime)
 							// Destroy objects in based minimum radius
 							if (DistLength <= DestroyDistance)
 							{
+
 								if (GetLocalRole() == ROLE_Authority)
 								{
+									Multi_PlayEffect(HitActor);    // Play Effects
 
-									PlayEffect(HitActor);          // Play Effects
+									
 									OnDestroyActor(HitActor);      // Active on destroy actor event before destroy actor permanently
 									HitActor-> Destroy(); 	       // Destroy Actor Permanently
-								}  
+								}
+
+							
+								
 							}
 				
 						}
@@ -186,11 +215,12 @@ void ABlackHoleSource::Tick(float DeltaTime)
 					// For Characters
 					auto * HitCharacter= Cast<ACharacter>(HitResult.Actor );
 
+					
 					if (IsValid(HitCharacter))
 					{
 
 						// Create the interpolation between the Character location and the center location of black hole.
-						const FVector ObjLocations = UKismetMathLibrary::VInterpTo (HitResult.Actor -> GetActorLocation(),GetActorLocation(),DeltaTime,SuctionVelocity/10.0f);
+						const FVector ObjLocations = UKismetMathLibrary::VInterpTo (HitResult.Actor -> GetActorLocation(),GetActorLocation(),DeltaTime,GravitationalAttraction/10.0f);
 
                         // If Character in range black hole, the movement mode is changed to Flying Mode
 						if (DistLength <= HoleRadius - (HoleRadius*0.1) )
@@ -209,14 +239,19 @@ void ABlackHoleSource::Tick(float DeltaTime)
 
 						if (DistLength <= DestroyDistance)
 						{
-
+							
 							// Destroy objects in based minimum radius
 							if (GetLocalRole() == ROLE_Authority)
 							{
-								PlayEffect(HitCharacter);             // Play Effects
+								Multi_PlayEffect(HitCharacter);    // Play Effects
+
 								OnDestroyActor(HitCharacter);         // Active on destroy actor event before destroy actor permanently
 								HitResult.Actor -> Destroy(); 	      // Destroy Actor Permanently
-							}  
+							}
+
+						
+
+							
 						}
 						
 					}
