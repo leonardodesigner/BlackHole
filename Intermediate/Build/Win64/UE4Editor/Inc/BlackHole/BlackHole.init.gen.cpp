@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeBlackHole_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x40A3D322,
+				0x467601A0,
 				0xC2708D67,
 				METADATA_PARAMS(nullptr, 0)
 			};

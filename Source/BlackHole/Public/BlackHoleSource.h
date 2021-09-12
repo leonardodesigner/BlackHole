@@ -52,36 +52,46 @@ public:
 	
 	// Suction Velocity
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Basic Properties", Meta =(ExposeOnSpawn="true"))
-	float SuctionVelocity = 10.0;
+	float GravitationalAttraction = 10.0;
 
 	// Black base hole Mesh
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite,  Category="Components" , Meta =(ExposeOnSpawn="true"))
 	UStaticMeshComponent* BlackHoleMesh;
 
 	// Black hole particle effect
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite,  Category = "Effects" , Meta =(ExposeOnSpawn="true",DisplayName="Black Hole Particle"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category = "Basic Properties|Effects" , Meta =(ExposeOnSpawn="true",DisplayName="Black Hole Particle"))
+	UParticleSystem* SetBlackHoleEffect;
+	UPROPERTY( BlueprintReadOnly,  Category = "Basic Properties|Effects")
 	UParticleSystemComponent* BlackHoleParticleEffect;
 	
 	// Black hole sound
-    UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category="Sounds" , Meta =(ExposeOnSpawn="true",DisplayName="Black Hole Sound"))
+    UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category="Basic Properties|Sounds" , Meta =(ExposeOnSpawn="true",DisplayName="Black Hole Sound"))
 	USoundBase* BlackHoleSound;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category = "Effects" , Meta =(ExposeOnSpawn="true"))
-	UParticleSystem* SuctionEffect;
+	// Black hole particle effect
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category = "Basic Properties|Effects" , Meta =(ExposeOnSpawn="true"))
+	UParticleSystem* DestructionEffect;
 	
 	// Black hole sound
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category="Sounds" , Meta =(ExposeOnSpawn="true"))
-	USoundBase* SuctionSound;
-	
-	//Play Effects Function
-	void PlayEffect(AActor * SuctedActor);
-	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,  Category="Basic Properties|Sounds" , Meta =(ExposeOnSpawn="true"))
+	USoundBase* DestructionSound;
 
+
+	//Play Effects Function
+	void PlayEffect(AActor * AttractedActor);
+
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	
 
+private:	
 
+	//Multicast spawn effect
+	UFUNCTION(NetMulticast,Reliable)
+	void Multi_PlayEffect(AActor * AttractedActor);
+	void Multi_PlayEffect_Implementation(AActor * AttractedActor);
 	
 public:	
 	// Called every frame

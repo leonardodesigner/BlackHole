@@ -32,7 +32,7 @@
 /wd4244
 /wd4838
 /I .
-/I E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Source\BlackHole\Private
+/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source\BlackHole\Private"
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -232,9 +232,9 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Inc\BlackHole
-/I E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Source
-/I E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Source\BlackHole\Public
+/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Inc\BlackHole"
+/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source"
+/I "E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Source\BlackHole\Public"
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -264,12 +264,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/FI"E:\UE4\AdvancedCharacterCpp\Intermediate\Build\Win64\AdvancedCharacterCppEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"E:\UE4\AdvancedCharacterCpp\Intermediate\Build\Win64\AdvancedCharacterCppEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"E:\UE4\AdvancedCharacterCpp\Intermediate\Build\Win64\AdvancedCharacterCppEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp"
-/FI"E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Definitions.BlackHole.h"
-/Fo"E:\UE4\AdvancedCharacterCpp\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp.obj"
+/FI"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp"
+/FI"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Definitions.BlackHole.h"
+/Fo"E:\UE4\Ue4April2021Bundle\UnrealEngine4Bundle1April2021\Unreal Engine 4 Bundle 1 April 2021\IWALS(Build1.4)\Plugins\BlackHole\Intermediate\Build\Win64\UE4Editor\Development\BlackHole\Module.BlackHole.cpp.obj"
 /TP
 /GR-
 /W4
