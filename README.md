@@ -22,7 +22,7 @@ Black hole plugin fully created in c++ and can be used in any project without c+
 - Highly optimized for production
 - All apearance can be editable
 - (NEW!) Replicated
-- Contains the suction event for case of kill characters or set any objectve in the game
+- Contains the Attraction event for case of kill characters or set any objectve in the game
 
 
 ## Installation
